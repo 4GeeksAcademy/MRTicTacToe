@@ -9,4 +9,4 @@ import "../styles/index.css";
 import App from "./component/App.jsx";
 
 //render your react application
-ReactDOM.createRoot(document.getElementById("app")).render(<App />);
+ReactDOM.createRoot(document.getElementById("#app")).render(<App />);
