@@ -1,6 +1,5 @@
 import { array } from "prop-types";
-import React, { Component, useState } from "react";
-import Square from "./square";
+import React, { useState } from "react";
 
 const Board = () => {
   const [squares, setSquares] = useState(array(9).fill(null));
@@ -15,6 +14,7 @@ const Board = () => {
         if (i === index) {
           return playerXturn ? "X" : "O";
         }
+
         return square;
       });
       setPlayerXturn(!playerXTurn);
