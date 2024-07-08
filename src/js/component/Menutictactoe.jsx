@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-const Menu = () => {
-  const handleStartGame = ({
-    player1Name,
-    player2Name,
-    setPlayer1Name,
-    setPlayer2Name,
-  }) => {
-    const [error, setError] = useState("");
-  };
+const Menu = ({
+  player1Name,
+  player2Name,
+  setPlayer1Name,
+  setPlayer2Name,
+  onStartGame,
+}) => {
+  const [error, setError] = useState("");
+
   const HandleStart = (weapon) => {
     if (!player1Name.trim() || !player2Name.trim()) {
       setError("Please fill both player names");
@@ -16,6 +16,7 @@ const Menu = () => {
     }
     onStartGame(weapon);
   };
+
   return (
     <div className="menu">
       <div className="text-white text-center py-5">
@@ -24,7 +25,7 @@ const Menu = () => {
       </div>
       <div className="menu">
         <div className="container-inputs d-flex row justify-content-center text-center">
-          <h2 className="col-12 text-white mt-5 mb-3">CHOOSE YOUR WEAPON</h2>{" "}
+          <h2 className="col-12 text-white mt-5 mb-3">CHOOSE YOUR WEAPON</h2>
           <div className="players">
             <input
               type="text"
