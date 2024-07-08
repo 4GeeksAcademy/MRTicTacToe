@@ -1,15 +1,23 @@
 import React, { useState } from "react";
 
-const Menu = ({ onWeaponPick }) => {
-  const handleStartGame = (weapon) => {
-    if (player1Name.trim() === "" || player2Name.trim() === "") {
-      setError("Please fill in both player names.");
+const Menu = () => {
+  const handleStartGame = ({
+    player1Name,
+    player2Name,
+    setPlayer1Name,
+    setPlayer2Name,
+  }) => {
+    const [error, setError] = useState("");
+  };
+  const HandleStart = (weapon) => {
+    if (!player1Name.trim() || !player2Name.trim()) {
+      setError("Please fill both player names");
       return;
     }
-    onWeaponPick(weapon);
+    onStartGame(weapon);
   };
   return (
-    <div className="container">
+    <div className="menu">
       <div className="text-white text-center py-5">
         <h1>Tic Tac Toe in React.js</h1>
         <h2 className="pt-3">Pick a Weapon</h2>
@@ -34,13 +42,13 @@ const Menu = ({ onWeaponPick }) => {
           {error && <p className="text-danger">{error}</p>}
           <button
             className="buttonx col-1 justify-content-center mx-3 mt-3 mb-5"
-            onClick={() => handleStartGame("X")}
+            onClick={() => HandleStart("X")}
           >
             X
           </button>
           <button
             className="buttono col-1 justify-content-center mx-3 mt-3 mb-5"
-            onClick={() => handleStartGame("O")}
+            onClick={() => HandleStart("O")}
           >
             O
           </button>
