@@ -50,16 +50,20 @@ const TicTacToe = ({ player1Name, player2Name, weapon }) => {
 
   return (
     <>
-      <div className="container d-flex justify-content-center align-items-center">
-        <div className="board">
-          <h3>
-            {winner
-              ? `Winner: ${winner}`
-              : `${playerXTurn ? player1Name : player2Name}'s turn`}
-          </h3>
-          <Board squares={squares} onClick={handleSquare} />
-          <button onClick={resetGame}>Reset</button>
-        </div>
+      <div className="text-white text-center py-5">
+        <h1>Tic Tac Toe in React.js</h1>
+        <h3 className="Textalign ">
+          {winner
+            ? `${winner} Wins!`
+            : `It's ${playerXTurn ? player1Name : player2Name}'s turn`}
+        </h3>
+        <button
+          onClick={resetGame}
+          className="justify-content-center align-items-center"
+        >
+          Reset
+        </button>
+        <Board squares={squares} onClick={handleSquare} />
       </div>
     </>
   );

@@ -1,24 +1,33 @@
 body {
   background-color: rgb(116, 75, 65);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
 .Textalign {
   display: flex;
+  text-align: center;
   justify-content: center;
   color: whitesmoke;
 }
+
 .color {
   margin: 10px;
   padding: 10px;
   background-color: rgb(88, 57, 49);
 }
+
 .buttoncolor1 {
   background-color: rgb(65, 42, 36);
   color: burlywood;
 }
+
 .buttoncolor2 {
   background-color: rgb(65, 42, 36);
   color: aqua;
 }
+
 .buttonx {
   font-weight: 900;
   font-size: 14px;
@@ -35,7 +44,9 @@ body {
   align-items: center;
   cursor: pointer;
   text-transform: uppercase;
+  width: auto;
 }
+
 .buttono {
   font-weight: 900;
   font-size: 14px;
@@ -52,4 +63,29 @@ body {
   align-items: center;
   cursor: pointer;
   text-transform: uppercase;
+  width: auto;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+.boardstyle {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template: repeat(3, min-content) / repeat(3, min-content);
+  justify-content: center;
+  align-content: center;
+  min-width: 490px;
+}
+.initialmenu {
+  background-color: rgb(78, 50, 44);
 }

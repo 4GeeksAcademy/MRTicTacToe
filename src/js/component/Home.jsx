@@ -12,7 +12,7 @@ const Home = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       {weapon ? (
         <TicTacToe
           player1Name={player1Name}

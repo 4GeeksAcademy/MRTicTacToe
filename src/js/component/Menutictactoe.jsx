@@ -18,12 +18,12 @@ const Menu = ({
   };
 
   return (
-    <div className="menu">
+    <div className="container container-fluid">
       <div className="text-white text-center py-5">
         <h1>Tic Tac Toe in React.js</h1>
         <h2 className="pt-3">Pick a Weapon</h2>
       </div>
-      <div className="menu">
+      <div className="initialmenu">
         <div className="container-inputs d-flex row justify-content-center text-center">
           <h2 className="col-12 text-white mt-5 mb-3">CHOOSE YOUR WEAPON</h2>
           <div className="players">
